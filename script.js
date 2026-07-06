@@ -60,3 +60,4 @@ document.querySelector("#rsvpForm")?.addEventListener("submit", (event) => {
     "Спасибо! Ответ сохранен в этом браузере.";
   form.reset();
 });
+
