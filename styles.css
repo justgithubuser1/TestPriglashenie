@@ -164,12 +164,12 @@ h2 {
 }
 
 .couple-photo {
-  width: min(58vw, 280px);
-  aspect-ratio: 4 / 5;
+  width: min(54vw, 280px);
+  aspect-ratio: 1;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(32, 29, 27, 0.28);
-  border-radius: 999px 999px 10px 10px;
+  border-radius: 50%;
   box-shadow: var(--shadow);
   background: rgba(255, 255, 255, 0.35);
 }
@@ -361,15 +361,18 @@ label span {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 560px;
 }
 
 .gallery img {
   width: 100%;
-  height: min(58dvh, 500px);
+  height: auto;
+  max-height: min(34dvh, 360px);
   object-fit: cover;
   border: 1px solid var(--line);
+  border-radius: 14px;
   box-shadow: var(--shadow);
 }
 
@@ -584,12 +587,8 @@ label span {
     min-height: 34px;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
   .gallery img {
-    height: 27dvh;
+    max-height: 28dvh;
   }
 
   .timeline li {
