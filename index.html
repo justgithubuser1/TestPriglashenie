@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Евгений & Валерия | Свадебное приглашение</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="invitation" aria-label="Свадебное приглашение">
+      <div class="swiper wedding-swiper">
+        <div class="swiper-wrapper">
+          <section class="swiper-slide slide cover-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content center framed">
+              <p class="eyebrow reveal">Вы приглашены</p>
+              <h1 class="hero-title reveal">На свадьбу</h1>
+              <button class="round-next reveal" type="button" data-next aria-label="Открыть приглашение"></button>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide names-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content center">
+              <div class="couple-photo reveal">
+                <img src="assets/couple-real.webp" alt="Евгений и Валерия" />
+              </div>
+              <h2 class="names reveal">Евгений<br /><span>and</span><br />Валерия</h2>
+              <p class="date-label reveal">Дата свадьбы</p>
+              <p class="date-line reveal">28.08.2026</p>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide guests-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content framed">
+              <h2 class="reveal">Дорогие гости!</h2>
+              <p class="note invite-text reveal">
+                В нашей жизни предстоят счастливые перемены! Мы хотим, чтобы в этот день рядом с нами были самые
+                близкие и дорогие для нас люди. Будем рады разделить с вами день нашей свадьбы.
+              </p>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide calendar-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content center">
+              <p class="eyebrow reveal">Дата свадьбы</p>
+              <h2 class="reveal">Август, 2026</h2>
+              <div class="calendar reveal" aria-label="Календарь на август 2026">
+                <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+                <i></i><i></i><i></i><i></i><i></i><b>1</b><b>2</b>
+                <b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b>
+                <b>10</b><b>11</b><b>12</b><b>13</b><b>14</b><b>15</b><b>16</b>
+                <b>17</b><b>18</b><b>19</b><b>20</b><b>21</b><b>22</b><b>23</b>
+                <b>24</b><b>25</b><b>26</b><b>27</b><strong>28</strong><b>29</b><b>30</b>
+                <b>31</b>
+              </div>
+              <p class="note reveal">28.08.2026</p>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide timer-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content center">
+              <p class="eyebrow reveal">До торжества осталось</p>
+              <div class="countdown reveal" aria-live="polite">
+                <div><strong id="days">00</strong><span>дней</span></div>
+                <div><strong id="hours">00</strong><span>часов</span></div>
+                <div><strong id="minutes">00</strong><span>минут</span></div>
+                <div><strong id="seconds">00</strong><span>секунд</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide schedule-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content">
+              <p class="eyebrow reveal">Программа</p>
+              <ol class="timeline reveal">
+                <li><time>11:00</time><span>ЗАГС</span></li>
+                <li><time>15:30</time><span>Сбор гостей</span></li>
+                <li><time>16:00</time><span>Церемония</span></li>
+                <li><time>16:30-17:00</time><span>Банкет</span></li>
+                <li><time>23:00</time><span>Завершение вечера</span></li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide map-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content">
+              <p class="eyebrow reveal">Локация</p>
+              <h2 class="reveal">Ресторан<br />«Моне»</h2>
+              <p class="note reveal">Бийск, ул. Ивана Крылова, 32к2</p>
+              <div class="map-frame reveal">
+                <iframe
+                  title="Карта места проведения"
+                  src="https://maps.google.com/maps?q=52.5224671,85.2445420&z=17&output=embed"
+                  loading="lazy">
+                </iframe>
+              </div>
+              <a class="text-link reveal" href="https://www.google.com/maps/search/?api=1&query=52.5224671%2C85.2445420" target="_blank" rel="noreferrer">
+                Открыть карту
+              </a>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide dress-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content">
+              <p class="eyebrow reveal">Дресс-код</p>
+              <div class="dress-card reveal" aria-label="Фото дресс-кода">
+                <img class="dress-palette" src="assets/dress-palette.webp" alt="Цветовая палитра дресс-кода" />
+                <img class="dress-looks" src="assets/dress-looks.webp" alt="Примеры образов для дресс-кода" />
+              </div>
+              <p class="note reveal">
+                Мы очень стараемся сделать праздник красивым и будем рады, если в своих нарядах Вы поддержите
+                цветовую гамму и стиль нашей свадьбы.
+              </p>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide gallery-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content">
+              <h2 class="reveal">Несколько теплых мгновений</h2>
+              <div class="gallery reveal">
+                <img src="assets/moment-1.webp" alt="Теплый момент Евгения и Валерии" />
+                <img src="assets/moment-2.webp" alt="Теплый момент Евгения и Валерии" />
+              </div>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide rsvp-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content">
+              <p class="eyebrow reveal">Анкета</p>
+              <p class="note reveal">Просим подтвердить свое присутствие до 1 августа</p>
+              <form class="rsvp-form reveal" id="rsvpForm">
+                <label>
+                  <span>Напишите, пожалуйста, ваше ФИО и ФИО вашей пары</span>
+                  <input name="guest_names" type="text" required />
+                </label>
+                <fieldset>
+                  <legend>Сможете ли присутствовать на нашем торжестве?</legend>
+                  <label class="radio-line"><input name="attendance" type="radio" value="Я буду один" required />Я буду один</label>
+                  <label class="radio-line"><input name="attendance" type="radio" value="Буду со своей парой" />Буду со своей парой</label>
+                </fieldset>
+                <label>
+                  <span>Комментарий</span>
+                  <textarea name="message" rows="3"></textarea>
+                </label>
+                <fieldset>
+                  <legend>Если планы изменились</legend>
+                  <label class="radio-line"><input name="attendance" type="radio" value="К сожалению, не смогу присутствовать" />К сожалению, не смогу присутствовать</label>
+                  <label class="radio-line"><input name="attendance" type="radio" value="Сообщу позже" />Сообщу позже</label>
+                </fieldset>
+                <button type="submit">Отправить</button>
+                <p class="form-status" id="formStatus" role="status"></p>
+              </form>
+            </div>
+          </section>
+
+          <section class="swiper-slide slide contacts-slide">
+            <div class="silk-layer" data-swiper-parallax="-18%"></div>
+            <div class="slide-content center framed">
+              <h2 class="reveal">Контакты</h2>
+              <div class="contacts reveal">
+                <p><strong>Жених:</strong> <a href="tel:+79990000000">+7 999 000-00-00</a></p>
+                <a href="mailto:groom@example.com">groom@example.com</a>
+                <p><strong>Невеста:</strong> <a href="tel:+79990000000">+7 999 000-00-00</a></p>
+                <a href="mailto:bride@example.com">bride@example.com</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-pagination"></div>
+        <button class="nav-button prev" type="button" aria-label="Предыдущий слайд"></button>
+        <button class="nav-button next" type="button" aria-label="Следующий слайд"></button>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
