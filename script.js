@@ -54,9 +54,36 @@ document.querySelector("#rsvpForm")?.addEventListener("submit", (event) => {
 
   const form = event.currentTarget;
   const data = Object.fromEntries(new FormData(form).entries());
-  localStorage.setItem("wedding-rsvp", JSON.stringify(data));
+  const status = document.querySelector("#formStatus");
+  const submitButton = form.querySelector('button[type="submit"]');
+  const googleFormUrl =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfhaXCjhxuuI5-KfU_b5iTl3tzj27etQwgmQShgyWycjRwHAw/formResponse";
+  const payload = new URLSearchParams({
+    "entry.933417631": data.guest_names || "",
+    "entry.1435269813": data.attendance || "",
+    "entry.286896690": data.message || "",
+  });
 
-  document.querySelector("#formStatus").textContent =
-    "Спасибо! Ответ сохранен в этом браузере.";
-  form.reset();
+  submitButton.disabled = true;
+  status.textContent = "Отправляем ответ...";
+
+  fetch(googleFormUrl, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: payload,
+  })
+    .then(() => {
+      status.textContent = "Спасибо! Ответ отправлен.";
+      form.reset();
+    })
+    .catch(() => {
+      status.textContent =
+        "Не получилось отправить ответ. Пожалуйста, попробуйте еще раз.";
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+    });
 });
