@@ -424,6 +424,10 @@ label span {
   gap: 8px;
 }
 
+.rsvp-form label[hidden] {
+  display: none !important;
+}
+
 .rsvp-form fieldset {
   display: grid;
   gap: 8px;
