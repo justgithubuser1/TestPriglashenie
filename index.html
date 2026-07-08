@@ -55,7 +55,7 @@
                 Нам было бы приятно, чтобы вы взяли с собой на мероприятие какой-то предмет или вещь,
                 которая ассоциируется с нами.
               </p>
-              <img class="request-image reveal" src="assets/moment-3.webp" alt="Предмет для свадебной просьбы" />
+              <img class="request-image reveal" src="assets/moment-3.webp" alt="Предмет для теплой свадебной просьбы" />
             </div>
           </section>
 
@@ -156,24 +156,25 @@
               <p class="eyebrow reveal">Анкета</p>
               <p class="note reveal">Просим подтвердить свое присутствие до 1 августа</p>
               <form class="rsvp-form reveal" id="rsvpForm">
-                <label>
-                  <span>Напишите, пожалуйста, ваше ФИО и ФИО вашей пары</span>
-                  <input name="guest_names" type="text" required />
-                </label>
                 <fieldset>
                   <legend>Сможете ли присутствовать на нашем торжестве?</legend>
                   <label class="radio-line"><input name="attendance" type="radio" value="Я буду один" required />Я буду один</label>
                   <label class="radio-line"><input name="attendance" type="radio" value="Буду со своей парой" />Буду со своей парой</label>
+                  <label class="radio-line"><input name="attendance" type="radio" value="К сожалению, не смогу присутствовать" />К сожалению, не смогу присутствовать</label>
+                  <label class="radio-line"><input name="attendance" type="radio" value="Сообщу позже" />Сообщу позже</label>
                 </fieldset>
+                <label>
+                  <span>Напишите, пожалуйста, ваше ФИО</span>
+                  <input name="guest_names" type="text" required />
+                </label>
+                <label>
+                  <span>ФИО вашей пары</span>
+                  <input name="partner_name" type="text" />
+                </label>
                 <label>
                   <span>Комментарий</span>
                   <textarea name="message" rows="3"></textarea>
                 </label>
-                <fieldset>
-                  <legend>Если планы изменились</legend>
-                  <label class="radio-line"><input name="attendance" type="radio" value="К сожалению, не смогу присутствовать" />К сожалению, не смогу присутствовать</label>
-                  <label class="radio-line"><input name="attendance" type="radio" value="Сообщу позже" />Сообщу позже</label>
-                </fieldset>
                 <button type="submit">Отправить</button>
                 <p class="form-status" id="formStatus" role="status"></p>
               </form>
