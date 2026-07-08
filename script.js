@@ -49,20 +49,67 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-document.querySelector("#rsvpForm")?.addEventListener("submit", (event) => {
+const rsvpForm = document.querySelector("#rsvpForm");
+const partnerInput = rsvpForm?.querySelector('[name="partner_name"]');
+const partnerField = partnerInput?.closest("label");
+
+function getGuestCount(attendance) {
+  if (attendance === "Я буду один") {
+    return "1";
+  }
+
+  if (attendance === "Буду со своей парой") {
+    return "2";
+  }
+
+  return "0";
+}
+
+function updatePartnerField() {
+  if (!rsvpForm || !partnerInput || !partnerField) {
+    return;
+  }
+
+  const isWithPartner = rsvpForm.elements.attendance.value === "Буду со своей парой";
+  partnerField.hidden = !isWithPartner;
+  partnerInput.disabled = !isWithPartner;
+
+  if (!isWithPartner) {
+    partnerInput.value = "";
+  }
+}
+
+rsvpForm?.addEventListener("change", (event) => {
+  if (event.target.name === "attendance") {
+    updatePartnerField();
+  }
+});
+
+updatePartnerField();
+
+rsvpForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const form = event.currentTarget;
   const data = Object.fromEntries(new FormData(form).entries());
+  const partnerName =
+    data.attendance === "Буду со своей парой" ? data.partner_name || "" : "";
+  const guestCount = getGuestCount(data.attendance);
   const status = document.querySelector("#formStatus");
   const submitButton = form.querySelector('button[type="submit"]');
   const googleFormUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLSfhaXCjhxuuI5-KfU_b5iTl3tzj27etQwgmQShgyWycjRwHAw/formResponse";
+  const guestCountEntry = "entry.1838228187";
   const payload = new URLSearchParams({
-    "entry.933417631": data.guest_names || "",
     "entry.1435269813": data.attendance || "",
+    "entry.933417631": data.guest_names || "",
+    "entry.1589170758": partnerName,
     "entry.286896690": data.message || "",
   });
+
+  if (guestCountEntry) {
+    payload.set(guestCountEntry, guestCount);
+  }
 
   submitButton.disabled = true;
   status.textContent = "Отправляем ответ...";
